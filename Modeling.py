@@ -17,7 +17,7 @@ y = df['price'].to_numpy()
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.17, random_state=0 )
 
-model = RandomForestRegressor(n_estimators=300, max_depth=15, random_state=0)
+model = RandomForestRegressor(n_estimators=300, max_depth=13, random_state=0)
 model.fit(X_train, y_train.ravel())  # Flatten y_train to 1D array
 
 train_predictions = model.predict(X_train)
