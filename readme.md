@@ -10,15 +10,15 @@ In this repository, you will find detailed documentation and code related to the
 
 ### Details
 **Machine Learning Models**
-1. Data Preprocessing 
+**1. Data Preprocessing**
 This step based on the data cleaning and analysis stage, which avoiding duplicates and null values, and finally determine the features for modeling. For categorical features, such as "district", "type of property", a onehot encoder were applied; and features like "PEB" and "building state" were graded. For the target variable "price," an IQR (Interquartile Range) method was applied to clean the outlier values.. 
 ![alt text](image.png)
 
 Moreover, a hotmap was used for feature selction. 
 ![alt text](image-1.png)
-2. Data formatting
+**2. Data formatting**
 Dataset was divided for training and testing. (X_train, y_train, X_test, y_test) to apply the models, and the test_size = 0.17.
-3. Model evaluation
+**3. Model evaluation**
 The following models were tested: 
 -Multiple Linear Regression (mae=13470393138.732042, r2=0.3598)
 -Gradient Boosting Regressor (mae=70222.05803619919 , r2=0.5657530850614323 ) 
@@ -27,9 +27,9 @@ The following models were tested:
 Random Forest Regression was choosen as a model for APP development. 
 
 **App Development** 
-1. Model Save 
+**1. Model Save** 
 The chosen Random Forest Regression model was saved as a joblib file. This serialized model file is used for deployment and loading the model in the Streamlit application for predictions. The model is saved using the joblib library to ensure efficient storage and retrieval.
-2. Streamit App Build-Up 
+**2. Streamit App Build-Up** 
 The Streamlit application was developed to provide an interactive interface for users to input property details and receive price predictions. Key features of the app include:
 **-User Input Form:** Allows users to enter property attributes such as district, type of property, energy performance, and building state.
 **-Model Integration:** Loads the saved joblib model and uses it to generate predictions based on user inputs.
