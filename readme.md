@@ -22,7 +22,7 @@ In this repository, you will find detailed documentation and code related to the
 This step based on the data cleaning and analysis stage, which avoiding duplicates and null values, and finally determine the features for modeling. For categorical features, such as "district", "type of property", a onehot encoder were applied; and features like "PEB" and "building state" were graded. For the target variable "price," an IQR (Interquartile Range) method was applied to clean the outlier values.. 
 ![alt text](image.png)
 
-Moreover, a hotmap was used for feature selction. 
+Moreover, a heatmap was used for feature selction. 
 ![alt text](image-1.png)
 **2. Data formatting**
 
@@ -30,11 +30,11 @@ Dataset was divided for training and testing. (X_train, y_train, X_test, y_test)
 
 **3. Model evaluation**
 
-The following models were tested: 
--Multiple Linear Regression (mae=13470393138.732042, r2=0.3598)
--Gradient Boosting Regressor (mae=70222.05803619919 , r2=0.5657530850614323 ) 
--Random Forest Regression (mae=68064.41199909725 , r2=0.5729080864923147) 
--XGbooster (mae=69716.98485641864, r2=0.572946573951231)
+The following models were tested:   
+-Multiple Linear Regression (mae=13470393138.732042, r2=0.3598)  
+-Gradient Boosting Regressor (mae=70222.05803619919 , r2=0.5657530850614323 )   
+-Random Forest Regression (mae=68064.41199909725 , r2=0.5729080864923147)   
+-XGbooster (mae=69716.98485641864, r2=0.572946573951231)  
 Random Forest Regression was choosen as a model for APP development. 
 
 **App Development** 
